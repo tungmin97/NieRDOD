@@ -1,0 +1,10 @@
+/*------------------ TABLE --------------------*/
+table{border-collapse:collapse}
+.tittle, .content, .track-no, .track-title{border-top:1px solid $(main.color);padding:.5em}
+.track-no{text-align:center}
+.tracklist, .infobox{border-bottom:1px solid $(main.color);width:100%;max-width:740px;margin:0 auto}
+.info{text-align:center;background-color:$(main.color);padding:10px;width:200px;margin: auto;color:$(light.text.color);border-radius:20px}
+.infobox tr{border-bottom:1px solid #3e3c34}
+td, th, .table{border-color:$(main.color) !important;text-align:initial;padding:.5em}
+.td-center{text-align:center;font-weight:700;letter-spacing: .1em;color:$(light.text.color);background-color: $(main.color);border-right-color: #726D5F !important}
+td img{max-width:100%}
