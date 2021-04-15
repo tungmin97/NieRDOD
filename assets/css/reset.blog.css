@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after{box-sizing:border-box;}
+:focus{outline:0;}
+a{color:inherit;}
+a,a:visited,a:hover,a:focus{text-decoration:none; cursor:pointer;}
+button{background-color:transparent; color:inherit; border-width:0; padding:0; cursor:pointer;}
+a img{border:none;}
+figure{margin:0;}
+input::-moz-focus-inner {border:0; padding:0; margin:0;}
+ul, ol, dd{margin:0; padding:0; list-style:none;}
+h1, h2, h3, h4, h5, h6{margin:0; font-size:inherit; font-weight:inherit;}
+p{margin:0;}
+cite {font-style:normal;}
+fieldset{border-width:0; padding:0; margin:0;}
+span.item-control,a.quickedit,#navbar-iframe,span.item-control,a.quickedit,.archive .home-link,.index .home-link,.home-link,.index .social-share{display:none !important;}
+.section,.widget,.widget ul{margin:0; padding:0;}
