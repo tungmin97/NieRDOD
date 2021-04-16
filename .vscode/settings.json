@@ -8,7 +8,7 @@
        {
            "format": "compressed",
            "extensionName": ".min.css",         
-           "savePath": "/assets/css"
+           "savePath": "/NieRDOD/assets/css"
        }
    ],
    "liveSassCompile.settings.excludeList": [
