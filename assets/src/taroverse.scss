@@ -20,7 +20,7 @@ a {
     }
 }
 p a {
-    transition: background 200s cubic-bezier(0.33, 0.66, 0.66, 1);
+    transition: background 200ms cubic-bezier(0.33, 0.66, 0.66, 1);
     padding: 0 3px;
     &:hover {
         color: $secondary-color;
@@ -198,11 +198,11 @@ body {
 .row {
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 10px;
 }
 #content-wrapper {
     margin: 10px auto 0;
     overflow: hidden;
+    padding-top: 10px;
 }
 .main-wrapper {
     float: left;
@@ -353,8 +353,6 @@ body {
     -webkit-transform: translateY(40px);
     -moz-transform: translateY(40px);
     transform: translateY(40px);
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
     transition: all 300ms ease;
     li {
         background-color: $main-color;
@@ -398,7 +396,7 @@ body {
     left: 0;
     position: absolute;
     width: 0%;
-    transition: 0.5s;
+    transition: 500ms;
 }
 .menu-main-nav li:hover::before {
     width: 100%;
@@ -476,8 +474,6 @@ body {
     font-size: 1.2em;
     color: $main-color;
     text-align: center;
-    -webkit-transition: 500ms ease all;
-    -moz-transition: 500ms ease all;
     transition: 500ms ease all;
     &:hover {
         background-color: $hover-color;
@@ -541,9 +537,7 @@ body {
     top: 0;
     left: -100%;
     width: 100%;
-    -webkit-transition: 0.54s cubic-bezier(0.65, 0.33, 0.35, 0.84);
-    -moz-transition: 0.54s cubic-bezier(0.65, 0.33, 0.35, 0.84);
-    transition: 0.54s cubic-bezier(0.65, 0.33, 0.35, 0.84);
+    transition: 540ms cubic-bezier(0.65, 0.33, 0.35, 0.84);
     overflow: auto;
     background: $main-color;
     height: 100%;
@@ -805,7 +799,7 @@ body {
     bottom: 3px;
     width: 0;
     background-color: $main-color;
-    transition: width 0.2s;
+    transition: width 200ms;
 }
 .more-link::after,
 .posts-link::after,
@@ -1100,8 +1094,6 @@ body {
     margin-bottom: -25px;
     opacity: 0;
     transition: all 200ms ease-in-out;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
 }
 .category-gallery {
     position: absolute;
@@ -1121,7 +1113,7 @@ body {
         font-weight: 400;
         text-transform: uppercase;
         border-radius: 2px;
-        transition: all 0.3s ease;
+        transition: all 300ms ease;
     }
 }
 .gallery .recent-title a {
@@ -1180,10 +1172,6 @@ body {
     }
 }
 .owl-height {
-    -webkit-transition: height 500ms ease-in-out;
-    -moz-transition: height 500ms ease-in-out;
-    -ms-transition: height 500ms ease-in-out;
-    -o-transition: height 500ms ease-in-out;
     transition: height 500ms ease-in-out;
 }
 .owl-carousel {
@@ -1443,7 +1431,7 @@ body {
         line-height: 70px;
         position: relative;
         border-radius: 35px;
-        transition: all 200s ease-in-out;
+        transition: all 200ms ease-in-out;
     }
 }
 .share-content .fac-art:hover {
@@ -1973,10 +1961,7 @@ a.read-more:hover,
     font-size: 13px;
 }
 .post-nav li strong i {
-    transition: all 0s ease;
-    -webkit-transition: all 0s ease;
-    -moz-transition: all 0s ease;
-    -o-transition: all 0s ease;
+    transition: all 0ms ease;
 }
 ul.post-nav {
     background-color: #c8c2aa;
@@ -1994,10 +1979,7 @@ ul.post-nav {
     line-height: 1.3em;
     display: block;
     padding: 15px 0;
-    transition: all 0s ease;
-    -webkit-transition: all 0s ease;
-    -moz-transition: all 0s ease;
-    -o-transition: all 0s ease;
+    transition: all 0ms ease;
 }
 .post-nav li:hover a {
     opacity: 0.6;
@@ -2144,7 +2126,7 @@ blockquote {
         &:hover {color: $text-color;}
     }
     &:hover {
-        transition: transform 300s cubic-bezier(0.33, 1.61, 0, 0.83);
+        transition: transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83);
         background: $main-color;
         color: $text-color; 
         a {
@@ -2252,7 +2234,7 @@ blockquote {
     display: block;
     text-decoration: none;
     border-radius: 35px;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 200ms ease-out;
     opacity: 0;
     z-index: 9999;
     &.show {opacity: 0.8;}
@@ -2263,7 +2245,7 @@ blockquote {
         left: 16px;
         top: 13px;
         font-size: 19px;
-        transition: all 300s ease; 
+        transition: all 300ms ease; 
     }
     &:hover {background: rgba(0, 0, 0, 0.9);
         i {
@@ -2545,13 +2527,13 @@ controls .owl-dot,
     border: none;
     overflow: hidden;
     clear: both;
-    transition: all 200s ease 150s;
+    transition: all 200ms ease 150ms;
 }
 .accordion .content.active {
     opacity: 1;
     padding: 1rem;
     max-height: 100%;
-    transition: all 350s ease 150s;
+    transition: all 350ms ease 150ms;
 }
 .accordion-item h3 {
     background: $main-color;
@@ -2604,7 +2586,7 @@ controls .owl-dot,
         top: 8px;
         left: 0;
         width: 15px;
-        transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+        transition: background 300ms ease-in-out, border 300ms ease-in-out;
     }
     &::after {
         content: "";
@@ -2672,18 +2654,12 @@ controls .owl-dot,
     position: absolute;
     left: 50%;
     margin-left: -7.5px;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 400ms ease;
 }
 .timeline-centered .timeline-info,
 .timeline-centered .timeline-content {
     width: 50%;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 400ms ease;
 }
 .timeline-item:nth-child(2n + 1) .timeline-info {
     float: left;
@@ -2699,10 +2675,7 @@ controls .owl-dot,
     color: $main-color;
     border-radius: 5px;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 400ms ease;
 }
 .timeline-item:nth-child(2n + 1) .timeline-content:before {
     content: "";
@@ -2738,10 +2711,7 @@ controls .owl-dot,
     color: $main-color;
     border-radius: 5px;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 400ms ease;
 }
 .timeline-title {
     padding: 20px;

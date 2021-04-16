@@ -26,8 +26,8 @@ a:hover, a :focus {
 }
 
 p a {
-  -webkit-transition: background 200s cubic-bezier(0.33, 0.66, 0.66, 1);
-  transition: background 200s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -webkit-transition: background 200ms cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: background 200ms cubic-bezier(0.33, 0.66, 0.66, 1);
   padding: 0 3px;
 }
 
@@ -241,12 +241,12 @@ body {
 .row {
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 10px;
 }
 
 #content-wrapper {
   margin: 10px auto 0;
   overflow: hidden;
+  padding-top: 10px;
 }
 
 .main-wrapper {
@@ -471,8 +471,8 @@ body {
   left: 0;
   position: absolute;
   width: 0%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .menu-main-nav li:hover::before {
@@ -634,8 +634,8 @@ body {
   top: 0;
   left: -100%;
   width: 100%;
-  -webkit-transition: 0.54s cubic-bezier(0.65, 0.33, 0.35, 0.84);
-  transition: 0.54s cubic-bezier(0.65, 0.33, 0.35, 0.84);
+  -webkit-transition: 540ms cubic-bezier(0.65, 0.33, 0.35, 0.84);
+  transition: 540ms cubic-bezier(0.65, 0.33, 0.35, 0.84);
   overflow: auto;
   background: #3e3c34;
   height: 100%;
@@ -967,8 +967,8 @@ body {
   bottom: 3px;
   width: 0;
   background-color: #3e3c34;
-  -webkit-transition: width 0.2s;
-  transition: width 0.2s;
+  -webkit-transition: width 200ms;
+  transition: width 200ms;
 }
 
 .more-link::after,
@@ -1298,9 +1298,8 @@ body {
           box-sizing: border-box;
   margin-bottom: -25px;
   opacity: 0;
-  transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .category-gallery {
@@ -1323,8 +1322,8 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   border-radius: 2px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .gallery .recent-title a {
@@ -1708,8 +1707,8 @@ body {
   line-height: 70px;
   position: relative;
   border-radius: 35px;
-  -webkit-transition: all 200s ease-in-out;
-  transition: all 200s ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .share-content .fac-art:hover {
@@ -2352,10 +2351,8 @@ a.read-more:hover,
 }
 
 .post-nav li strong i {
-  transition: all 0s ease;
-  -webkit-transition: all 0s ease;
-  -moz-transition: all 0s ease;
-  -o-transition: all 0s ease;
+  -webkit-transition: all 0ms ease;
+  transition: all 0ms ease;
 }
 
 ul.post-nav {
@@ -2374,10 +2371,8 @@ ul.post-nav {
   line-height: 1.3em;
   display: block;
   padding: 15px 0;
-  transition: all 0s ease;
-  -webkit-transition: all 0s ease;
-  -moz-transition: all 0s ease;
-  -o-transition: all 0s ease;
+  -webkit-transition: all 0ms ease;
+  transition: all 0ms ease;
 }
 
 .post-nav li:hover a {
@@ -2550,10 +2545,10 @@ blockquote::after {
 }
 
 .cloud-label-widget-content .label-size:hover {
-  -webkit-transition: -webkit-transform 300s cubic-bezier(0.33, 1.61, 0, 0.83);
-  transition: -webkit-transform 300s cubic-bezier(0.33, 1.61, 0, 0.83);
-  transition: transform 300s cubic-bezier(0.33, 1.61, 0, 0.83);
-  transition: transform 300s cubic-bezier(0.33, 1.61, 0, 0.83), -webkit-transform 300s cubic-bezier(0.33, 1.61, 0, 0.83);
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83);
+  transition: -webkit-transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83);
+  transition: transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83);
+  transition: transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83), -webkit-transform 300ms cubic-bezier(0.33, 1.61, 0, 0.83);
   background: #3e3c34;
   color: #f0ede3;
 }
@@ -2684,8 +2679,8 @@ blockquote::after {
   display: block;
   text-decoration: none;
   border-radius: 35px;
-  -webkit-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
   opacity: 0;
   z-index: 9999;
 }
@@ -2701,8 +2696,8 @@ blockquote::after {
   left: 16px;
   top: 13px;
   font-size: 19px;
-  -webkit-transition: all 300s ease;
-  transition: all 300s ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 #back-to-top:hover {
@@ -2873,16 +2868,16 @@ controls .owl-dot,
   border: none;
   overflow: hidden;
   clear: both;
-  -webkit-transition: all 200s ease 150s;
-  transition: all 200s ease 150s;
+  -webkit-transition: all 200ms ease 150ms;
+  transition: all 200ms ease 150ms;
 }
 
 .accordion .content.active {
   opacity: 1;
   padding: 1rem;
   max-height: 100%;
-  -webkit-transition: all 350s ease 150s;
-  transition: all 350s ease 150s;
+  -webkit-transition: all 350ms ease 150ms;
+  transition: all 350ms ease 150ms;
 }
 
 .accordion-item h3 {
@@ -2944,8 +2939,8 @@ controls .owl-dot,
   top: 8px;
   left: 0;
   width: 15px;
-  -webkit-transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  -webkit-transition: background 300ms ease-in-out, border 300ms ease-in-out;
+  transition: background 300ms ease-in-out, border 300ms ease-in-out;
 }
 
 .timeline-marker::after {
@@ -3027,15 +3022,15 @@ controls .owl-dot,
   position: absolute;
   left: 50%;
   margin-left: -7.5px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .timeline-centered .timeline-info,
 .timeline-centered .timeline-content {
   width: 50%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .timeline-item:nth-child(2n + 1) .timeline-info {
@@ -3054,8 +3049,8 @@ controls .owl-dot,
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .timeline-item:nth-child(2n + 1) .timeline-content:before {
@@ -3096,8 +3091,8 @@ controls .owl-dot,
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .timeline-title {
