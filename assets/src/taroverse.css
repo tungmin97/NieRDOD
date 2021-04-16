@@ -37,19 +37,6 @@ p a:hover {
   border-radius: 5px;
 }
 
-.brc {
-  color: #3e3c34;
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 14px;
-  text-rendering: auto;
-}
-
-.brc::before {
-  margin: 0 5px;
-  content: "\f105";
-}
-
 .icon::before, .postags a::before {
   font-family: FontAwesome;
   font-weight: 400;
@@ -1962,10 +1949,6 @@ body {
   letter-spacing: -0.04em;
 }
 
-.post h2 a:hover {
-  color: #3e3c34;
-}
-
 .widget iframe {
   max-width: 100%;
 }
@@ -1986,8 +1969,7 @@ body {
   display: none !important;
 }
 
-.index .post h2,
-.archive .post h2 {
+.index .post h2, .archive .post h2 {
   margin: 0 0 10px;
   padding: 0 10px 0 0;
   overflow: hidden;
@@ -1995,10 +1977,15 @@ body {
 }
 
 .index .post h2 a {
-  font-size: 25px;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 0;
-  text-shadow: 0.4rem 0.4rem 0 rgba(114, 109, 88, 0.4);
+  text-shadow: 4rem 4rem 0 rgba(114, 109, 88, 0.4);
+  color: #3e3c34;
+}
+
+.index .post h2 a:hover {
+  opacity: 0.8;
 }
 
 .item .post,
@@ -2140,6 +2127,23 @@ a.read-more::after {
   opacity: 0.8;
 }
 
+.breadcrumbs span {
+  line-height: normal;
+}
+
+.brc {
+  color: #3e3c34;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 14px;
+  text-rendering: auto;
+}
+
+.brc::before {
+  margin: 0 5px;
+  content: "\f105";
+}
+
 .item article, .static_page article {
   margin: 15px auto 0;
 }
@@ -2179,12 +2183,6 @@ a.read-more::after {
 
 .item .post-outer {
   padding: 0;
-}
-
-.item .post-body img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
 }
 
 .post-timestamp {
@@ -2366,6 +2364,11 @@ ul.post-nav {
   overflow: hidden;
 }
 
+ul.post-nav span {
+  font-size: 13px;
+  font-weight: 400;
+}
+
 .post-nav li a {
   color: #3e3c34;
   line-height: 1.3em;
@@ -2379,11 +2382,6 @@ ul.post-nav {
   opacity: 0.6;
 }
 
-ul.post-nav span {
-  font-size: 13px;
-  font-weight: 400;
-}
-
 .post-nav .previous {
   float: left;
   min-height: 80px;
@@ -2391,6 +2389,17 @@ ul.post-nav span {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 10px;
+}
+
+.post-nav .previous strong::after {
+  content: "\f105";
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 8px;
+  font-style: normal;
+  top: -2px;
+  position: relative;
+  width: 15px;
 }
 
 .post-nav .next {
@@ -2402,8 +2411,15 @@ ul.post-nav span {
           box-sizing: border-box;
 }
 
-.index #blog-pager {
-  display: none;
+.post-nav .next strong::before {
+  content: "\f104";
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 8px;
+  font-style: normal;
+  top: -2px;
+  position: relative;
+  width: 15px;
 }
 
 #disqus_thread {

@@ -28,17 +28,6 @@ p a {
         border-radius: 5px;
     }
 }
-.brc {
-    color: $main-color;
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 14px;
-    text-rendering: auto;
-    &::before {
-        margin: 0 5px;
-        content: "\f105";
-    }
-}
 .icon, .postags a {
     &::before {
     font-family: FontAwesome;
@@ -1637,9 +1626,6 @@ body {
     font-family: "Montserrat";
     letter-spacing: -0.04em;
 }
-.post h2 a:hover {
-    color: $main-color;
-}
 .widget iframe {
     max-width: 100%;
 }
@@ -1656,18 +1642,21 @@ body {
 .archive .post-footer {
     display: none !important;
 }
-.index .post h2,
-.archive .post h2 {
+.index, .archive {
+    .post h2 {
     margin: 0 0 10px;
     padding: 0 10px 0 0;
     overflow: hidden;
     text-align: initial;
+    }
 }
 .index .post h2 a {
-    font-size: 25px;
+    font-size: 2em;
     font-weight: 600;
     letter-spacing: 0;
-    text-shadow: 0.4rem 0.4rem 0 rgba(114, 109, 88, 0.4);
+    text-shadow: 4rem 4rem 0 rgba(114, 109, 88, 0.4);
+    color: $main-color;
+    &:hover {opacity: 0.8;}
 }
 .item .post,
 .static_page .post {
@@ -1785,6 +1774,18 @@ a.read-more {
     text-transform: uppercase;
     text-align: center;
     &:hover {opacity: 0.8;}
+    span {line-height: normal;}
+}
+.brc {
+    color: $main-color;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    &::before {
+        margin: 0 5px;
+        content: "\f105";
+    }
 }
 .item, .static_page {
     article {
@@ -1821,17 +1822,8 @@ a.read-more {
     overflow: hidden;
     font-family: "Muli";
 }
-.item .post-outer {
-    padding: 0;
-}
-.item .post-body img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-.post-timestamp {
-    margin-left: 0;
-}
+.item .post-outer {padding: 0;}
+.post-timestamp {margin-left: 0;}
 .label-head {margin-left: 0;
     a {padding-left: 2px;
         &:hover {color: $main-color;}
@@ -1952,16 +1944,14 @@ a.read-more:hover,
     padding: 0;
     display: inline-block;
     width: 50%;
-}
-.post-nav li strong {
-    display: block;
-    padding: 0 0 5px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-.post-nav li strong i {
-    transition: all 0ms ease;
+    strong {
+        display: block;
+        padding: 0 0 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        i {transition: all 0ms ease;}
+    }
 }
 ul.post-nav {
     background-color: $secondary-color;
@@ -1973,6 +1963,10 @@ ul.post-nav {
     display: block;
     width: 100%;
     overflow: hidden;
+    span {
+        font-size: 13px;
+        font-weight: 400;
+    }
 }
 .post-nav li a {
     color: $main-color;
@@ -1984,16 +1978,22 @@ ul.post-nav {
 .post-nav li:hover a {
     opacity: 0.6;
 }
-ul.post-nav span {
-    font-size: 13px;
-    font-weight: 400;
-}
 .post-nav .previous {
     float: left;
     min-height: 80px;
     border-right: 1px solid $main-color;
     box-sizing: border-box;
     padding-right: 10px;
+    strong::after {
+        content: "\f105";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 8px;
+        font-style: normal;
+        top: -2px;
+        position: relative;
+        width: 15px;
+    }
 }
 .post-nav .next {
     text-align: right;
@@ -2001,17 +2001,22 @@ ul.post-nav span {
     margin-left: -1px;
     padding-left: 10px;
     box-sizing: border-box;
-}
-.index #blog-pager {
-    display: none;
+    strong::before {
+        content: "\f104";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 8px;
+        font-style: normal;
+        top: -2px;
+        position: relative;
+        width: 15px;
+    }
 }
 #disqus_thread {
     width: 75%;
     margin: 0 auto;
 }
-#disqus_recommendations {
-    display: none;
-}
+#disqus_recommendations {display: none;}
 .post-body h1,
 .post-body h2,
 .post-body h3,
