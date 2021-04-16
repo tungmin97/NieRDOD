@@ -1733,7 +1733,7 @@ body {
   text-transform: uppercase;
   display: inline-block;
   padding: 0;
-  border-bottom: 2px solid #222222;
+  border-bottom: 2px solid #3e3c34;
   text-align: initial;
 }
 
@@ -1871,7 +1871,7 @@ body {
 }
 
 .cmm-widget a {
-  color: #222222;
+  color: #3e3c34;
   position: relative;
   font-size: 13px;
   text-transform: capitalize;
@@ -2356,7 +2356,7 @@ a.read-more:hover,
 }
 
 ul.post-nav {
-  background-color: #c8c2aa;
+  background-color: #d0cab2;
   background-size: 4px 4px;
   background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px), linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
   border-bottom: 2px solid #3e3c34;
@@ -2367,7 +2367,7 @@ ul.post-nav {
 }
 
 .post-nav li a {
-  color: #222222;
+  color: #3e3c34;
   line-height: 1.3em;
   display: block;
   padding: 15px 0;
@@ -2780,7 +2780,8 @@ controls .owl-dot,
 .accordion h3:hover,
 .accordion h3:hover::after,
 .owl-prev,
-.owl-next {
+.owl-next,
+.menu-main-nav li {
   cursor: url("https://1.bp.blogspot.com/-xS3yuxeL5uw/W4JDfsJs9QI/AAAAAAAAEgE/P1EKFcxzyooqsSRJGZFtUDRTClxx-ZOEACLcBGAs/s1600/Hack_Link%2BSelect.png"), pointer;
 }
 
@@ -2847,8 +2848,9 @@ controls .owl-dot,
   content: "\f067";
   position: absolute;
   float: right;
-  right: 1rem;
-  font-size: 0.7rem;
+  top: 0.9em;
+  right: 5rem;
+  font-size: 0.7em;
   font-weight: 500;
   padding: 8px;
   width: 30px;
@@ -2882,9 +2884,14 @@ controls .owl-dot,
 
 .accordion-item h3 {
   background: #3e3c34;
-  padding: 10px;
+  padding: 17px;
   color: #f0ede3;
+  font-size: 1em;
   border-radius: 15px;
+}
+
+.accordion-item h3 b {
+  padding: 0 21px;
 }
 
 .timeline {
