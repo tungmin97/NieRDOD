@@ -297,15 +297,13 @@ body {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    -webkit-transition: 500ms ease all;
-    -moz-transition: 500ms ease all;
-    transition: 500ms ease all;
+    transition: all 500ms ease-in-out;
     a {
         color: $main-color;
         font-size: 20px;
         line-height: 50px;
         max-height: 50px;
-        padding: 0 !important;
+        padding: 0;
     }
     &:hover {
         background-color: $hover-color;
@@ -1042,8 +1040,6 @@ body {
 }
 
 //Gallery
-
-
 .img-overlay {
     position: absolute;
     left: 0;
@@ -1053,8 +1049,6 @@ body {
     height: 100%;
     background-color: rgba(40, 35, 40, 0.05);
 }
-
-
 .tk-thumb a:hover .img-overlay,
 .boxes ul li .box-image:hover .img-overlay,
 .boxes .bx-first:hover .img-overlay,
@@ -1115,20 +1109,20 @@ body {
     right: 10px;
     z-index: 3;
     overflow: hidden;
-}
-.category-gallery a:before {
-    display: block;
-    background-color: $main-color;
-    opacity: 0.5;
-    color: $text-color;
-    height: 18px;
-    line-height: 18px;
-    padding: 0 5px;
-    font-size: 10px;
-    font-weight: 400;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+    a:before {
+        display: block;
+        background-color: $main-color;
+        opacity: 0.5;
+        color: $text-color;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 5px;
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
 }
 .gallery .recent-title a {
     display: block;
@@ -1198,23 +1192,23 @@ body {
     -webkit-tap-highlight-color: transparent;
     position: relative;
     z-index: 1;
-}
-.owl-carousel .owl-stage {
-    position: relative;
-    touch-action: pan-Y;
-}
-.owl-carousel .owl-stage:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-.owl-carousel .owl-stage-outer {
-    position: relative;
-    overflow: hidden;
-    transform: translate3d(0px, 0px, 0px);
+    .owl-stage {
+        position: relative;
+        touch-action: pan-Y;
+        &::after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+    .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0px, 0px, 0px);
+    }
 }
 .owl-carousel .owl-controls .owl-nav .owl-prev,
 .owl-carousel .owl-controls .owl-nav .owl-next,
@@ -1382,10 +1376,9 @@ body {
     font-family: "Montserrat";
     font-size: 18px;
 }
-.carousel-item .recent-author,
-.carousel-item .recent-date {
-    color: #ccc;
-}
+.carousel-item {
+    .recent-author, .recent-date {color: $text-color;}
+} 
 .carousel-tag a {
     display: inline-block;
     background-color: $main-color;
@@ -1438,20 +1431,20 @@ body {
 .share-content {
     display: inline-block;
     margin: 10px;
-}
-.share-content a {
-    font-size: 30px;
-    text-align: center;
-    background: $main-color;
-    color: $text-color;
-    cursor: pointer;
-    display: block;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
-    position: relative;
-    border-radius: 35px;
-    transition: all 0.2s;
+    a {
+        font-size: 30px;
+        text-align: center;
+        background: $main-color;
+        color: $text-color;
+        cursor: pointer;
+        display: block;
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+        position: relative;
+        border-radius: 35px;
+        transition: all 200s ease-in-out;
+    }
 }
 .share-content .fac-art:hover {
     box-shadow: 0 0 15px rgba(49, 77, 145, 0.7);
@@ -1461,13 +1454,9 @@ body {
     box-shadow: 0 0 15px rgba(7, 190, 237, 0.7);
     color: #00aced;
 }
-.share-content .goo-art:hover {
-    box-shadow: 0 0 15px rgba(221, 75, 56, 0.7);
-    color: #dd4b39;
-}
 .related-title {
     height: 36px;
-    color: #222222;
+    color: $main-color;
     font-size: 13px;
     font-weight: 700;
     position: relative;
@@ -1480,107 +1469,101 @@ body {
 }
 .recent-author,
 .recent-date {
-    color: #3e3c34;
+    color: $main-color;
     font-size: 12px;
-    font-weight: 400;
+    line-height: 10px;
 }
-.recent-date:before,
-.featured-date:before {
-    content: "\f133";
-    font-family: fontawesome;
-    color: $main-color;
-    margin-right: 5px;
-}
-.recent-author::before,
-.featured-author::before {
-    content: "\f007";
-    font-family: fontawesome;
-    color: $main-color;
-    margin-right: 5px;
+.recent-date, .featured-date {
+    &::before {
+        content: "\f133";
+        font-family: fontawesome;
+        color: $main-color;
+        margin-right: 5px;
+    }
 }
 .recent-author,
 .featured-author {
     margin-right: 10px;
+    &::before {
+        content: "\f007";
+        font-family: fontawesome;
+        color: $main-color;
+        margin-right: 5px;
+    }
 }
-.custom-widget li {
-    overflow: hidden;
-    border-bottom: 1px solid $main-color;
-    padding: 10px 0;
-}
-.custom-widget li:first-child {
-    padding-top: 0;
-}
-.custom-widget li:last-child {
-    border-bottom: none;
-}
-.custom-widget .rcthumb {
-    position: relative;
-    float: left;
-    margin: 0;
-    width: 110px;
-    height: 75px;
-    overflow: hidden;
-    display: block;
-    vertical-align: middle;
-    box-shadow: 4px 4px 0 rgba(77, 73, 62, 0.7);
-    border-radius: 3px;
-}
-.custom-widget .post-panel {
-    padding-left: 10px;
-    display: table-cell;
-}
-.custom-widget .featured-title {
-    overflow: hidden;
-    line-height: 0;
-    margin: 0 0 2px;
-    padding: 0;
-}
-.custom-widget .featured-title a {
-    color: $main-color;
-    line-height: 1.4;
-    font-weight: 600;
-    font-family: "Montserrat";
-    font-size: 14px;
-}
-.custom-widget .featured-title a:hover {
-    color: $main-color;
-}
-.cmm-widget li .cmm-avatar {
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    width: 55px;
-    height: 55px;
-    float: left;
-    margin: 0 10px 0 0;
+.custom-widget {
+    li {
+        overflow: hidden;
+        border-bottom: 1px solid $main-color;
+        padding: 10px 0;
+        &:first-child {padding-top: 0;}
+        &:last-child {border-bottom: none;}
+    }
+    .rcthumb {
+        position: relative;
+        float: left;
+        margin: 0;
+        width: 110px;
+        height: 75px;
+        overflow: hidden;
+        display: block;
+        vertical-align: middle;
+        box-shadow: 4px 4px 0 rgba(77, 73, 62, 0.7);
+        border-radius: 3px;
+    }
+    .post-panel {
+        padding-left: 10px;
+        display: table-cell;
+    }
+    .featured-title {
+        overflow: hidden;
+        line-height: 0;
+        margin: 0 0 2px;
+        padding: 0;
+        a {
+            color: $main-color;
+            line-height: 1.4;
+            font-weight: 600;
+            font-family: "Montserrat";
+            font-size: 14px;
+            &:hover {color: $main-color;}
+        }
+    }
 }
 .cmm-widget li {
-    background: none !important;
+    background: none;
     clear: both;
     list-style: none;
     word-break: break-all;
     display: block;
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid $text-color;
     overflow: hidden;
     margin: 0;
     padding: 10px 0;
-}
-.cmm-widget li:first-child {
-    padding-top: 0;
-    border-top: 0;
-}
-.cmm-widget li:last-child {
-    padding-bottom: 0;
-}
-.cmm-widget li span {
-    margin-top: 4px;
-    color: #bdbdbd;
-    display: block;
-    line-height: 1.2em;
-    text-transform: lowercase;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
+    &:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+    &:last-child {padding-bottom: 0;}
+    span {
+        margin-top: 4px;
+        color: #bdbdbd;
+        display: block;
+        line-height: 1.2em;
+        text-transform: lowercase;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .cmm-avatar {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        width: 55px;
+        height: 55px;
+        float: left;
+        margin: 0 10px 0 0;
+    }
 }
 .cmm-img {
     width: 55px;
@@ -1588,25 +1571,21 @@ body {
     float: left;
     margin: 0 10px 0 0;
 }
-.cmm-widget a {
-    color: #222222;
-    position: relative;
-    font-size: 13px;
-    text-transform: capitalize;
-    display: block;
-    overflow: hidden;
-    font-weight: 400;
-}
-.cmm-widget a:hover {
-    color: $main-color;
-}
 .cmm-widget {
     list-style: none;
     padding: 0;
+    a {
+        color: #222222;
+        position: relative;
+        font-size: 13px;
+        text-transform: capitalize;
+        display: block;
+        overflow: hidden;
+        font-weight: 400;
+        &:hover {color: $main-color;}
+    }
 }
-.posts-title {
-    margin-right: 2%;
-}
+.posts-title {margin-right: 2%;}
 .post {
     display: block;
     overflow: hidden;
@@ -1630,21 +1609,21 @@ body {
     width: 300px;
     height: 190px;
     margin-right: 20px;
-}
-.block-image .thumb {
-    width: 100%;
-    height: 190px;
-    position: relative;
-    display: block;
-    z-index: 2;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 5px 5px 0 rgba(77, 73, 62, 0.7);
-}
-.block-image .thumb a {
-    width: 100%;
-    height: 190px;
-    display: block;
+    .thumb {
+        width: 100%;
+        height: 190px;
+        position: relative;
+        display: block;
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 3px;
+        box-shadow: 5px 5px 0 rgba(77, 73, 62, 0.7);
+        a {
+            width: 100%;
+            height: 190px;
+            display: block;
+        }
+    }
 }
 .thumb-overlay {
     position: absolute;
@@ -1715,37 +1694,37 @@ body {
 }
 #meta-post {
     font-size: 13px;
-    color: #bdbdbd;
+    color: $text-color;
     line-height: 1.4em;
-}
-#meta-post a {
-    color: #3e3c34;
-}
-#meta-post a span:before {
-    content: "\f007";
-    font-family: fontawesome;
-    color: $main-color;
-    margin-right: 5px;
-}
-#meta-post .timestamp-link {
-    margin-left: 10px;
-}
-#meta-post .timestamp-link abbr:before {
-    content: "\f133";
-    font-family: fontawesome;
-    color: $main-color;
-    margin-right: 5px;
+    a {
+        color: $main-color;
+        span:before {
+            content: "\f007";
+            font-family: fontawesome;
+            color: $main-color;
+            margin-right: 5px;
+        } 
+    }
+    .timestamp-link {
+        margin-left: 10px;
+        abbr:before {
+            content: "\f133";
+            font-family: fontawesome;
+            color: $main-color;
+            margin-right: 5px;
+        }
+    }
 }
 .resumo {
     margin-top: 8px;
     font-size: 13px;
     line-height: 1.5em;
     color: $main-color;
-}
-.resumo span {
-    display: block;
-    margin-bottom: 8px;
-    padding-right: 10px;
+    span {
+        display: block;
+        margin-bottom: 8px;
+        padding-right: 10px;
+    }
 }
 a.read-more {
     display: inline-block;
@@ -1768,12 +1747,12 @@ a.read-more {
     border: none;
     overflow: hidden;
     font-family: "Muli";
-}
-a.read-more:after {
-    content: "\f101";
-    font-family: FontAwesome;
-    font-size: 13px;
-    margin-left: 5px;
+    &::after {
+        content: "\f101";
+        font-family: FontAwesome;
+        font-size: 13px;
+        margin-left: 5px;
+    }
 }
 .post-meta {
     color: $main-color;
@@ -1785,35 +1764,28 @@ a.read-more:after {
     padding: 0;
     text-transform: uppercase;
     text-align: center;
-}
-.post-meta:hover {
-    opacity: 0.8;
-}
-.hreview {
-    display: none !important;
+    &:hover {opacity: 0.8;}
 }
 .postags {
     position: absolute;
     top: 15px;
     left: 15px;
     z-index: 3;
-}
-.postags a {
-    display: inline-block;
-    background: $main-color;
-    color: $text-color;
-    margin: 0;
-    height: 20px;
-    line-height: 20px;
-    padding: 0 6px;
-    font-size: 11px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    display: none;
-    font-family: 'Montserrat';
-}
-.postags a:first-child {
-    display: inline-block;
+    a {
+        display: inline-block;
+        background: $main-color;
+        color: $text-color;
+        margin: 0;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 6px;
+        font-size: 11px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        display: none;
+        font-family: 'Montserrat';
+        &:first-child {display: inline-block;}
+    }
 }
 
 //Breadcrumbs
@@ -2518,17 +2490,17 @@ controls .owl-dot,
     }
 }
 
-/*---------------- FAQ --------------------*/
+//FAQ
+.accordion {
+    width: 75%;
+    margin: auto;
+}
 .accordion h3 {
     position: relative;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     padding: 1rem 3rem 1rem 1rem;
@@ -2549,7 +2521,7 @@ controls .owl-dot,
     color: $active-color;
     border: 1px solid #cd664d;
 }
-.accordion h3:after {
+.accordion h3::after {
     font-family: FontAwesome;
     content: "\f067";
     position: absolute;
@@ -2573,21 +2545,13 @@ controls .owl-dot,
     border: none;
     overflow: hidden;
     clear: both;
-    -webkit-transition: all 0.2s ease 0.15s;
-    -o-transition: all 0.2s ease 0.15s;
-    transition: all 0.2s ease 0.15s;
+    transition: all 200s ease 150s;
 }
 .accordion .content.active {
     opacity: 1;
     padding: 1rem;
     max-height: 100%;
-    -webkit-transition: all 0.35s ease 0.15s;
-    -o-transition: all 0.35s ease 0.15s;
-    transition: all 0.35s ease 0.15s;
-}
-.accordion {
-    width: 75%;
-    margin: auto;
+    transition: all 350s ease 150s;
 }
 .accordion-item h3 {
     background: $main-color;
