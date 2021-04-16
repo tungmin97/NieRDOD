@@ -3639,4 +3639,8 @@ controls .owl-dot,
   .col-xs-12 {
     padding: 0;
   }
+  .timeline-item .timeline-content,
+  .timeline-item .timeline-info {
+    margin-left: 10px;
+  }
 }

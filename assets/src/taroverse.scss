@@ -3098,4 +3098,6 @@ controls .owl-dot,
     .timeline-item .timeline-content::before {display: none;}
     .timeline-item .timeline-content {margin-left: 0;}
     .col-xs-12 {padding: 0;}
+    .timeline-item .timeline-content,
+    .timeline-item .timeline-info {margin-left: 10px;}
 }
