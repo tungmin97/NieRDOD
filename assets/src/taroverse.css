@@ -1187,7 +1187,7 @@ body {
   border-radius: 3px;
 }
 
-.feat .bx-item .bx-content {
+.feat .bx-item .bf-content {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1197,7 +1197,7 @@ body {
           box-sizing: border-box;
 }
 
-.feat .bx-item .bx-content .recent-title a {
+.feat .bx-item .bf-content .recent-title a {
   display: block;
   color: #f0ede3;
   margin-bottom: 5px;
@@ -1206,7 +1206,7 @@ body {
   font-family: "Montserrat";
 }
 
-.feat .bx-item .bx-content .recent-author, .feat .bx-item .bx-content .recent-date {
+.feat .bx-item .bf-content .recent-author, .feat .bx-item .bf-content .recent-date {
   color: #f0ede3;
 }
 
