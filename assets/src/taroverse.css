@@ -2391,15 +2391,14 @@ ul.post-nav span {
   padding-right: 10px;
 }
 
-.post-nav .previous strong::after {
-  content: "\f105";
+.post-nav .previous strong::before {
+  content: "\f104";
   display: inline-block;
   font-family: FontAwesome;
-  font-size: 8px;
+  font-size: 1.2em;
   font-style: normal;
-  top: -2px;
   position: relative;
-  width: 15px;
+  width: 0.7em;
 }
 
 .post-nav .next {
@@ -2411,15 +2410,14 @@ ul.post-nav span {
           box-sizing: border-box;
 }
 
-.post-nav .next strong::before {
-  content: "\f104";
+.post-nav .next strong::after {
+  content: "\f105";
   display: inline-block;
   font-family: FontAwesome;
-  font-size: 8px;
+  font-size: 1.2em;
   font-style: normal;
-  top: -2px;
   position: relative;
-  width: 15px;
+  width: 0.7em;
 }
 
 #disqus_thread {
@@ -3621,11 +3619,24 @@ controls .owl-dot,
   .related-wrap li {
     margin: 0;
   }
+  .custom-widget .rcthumb {
+    margin: 0;
+  }
   .sidebar .custom-widget li {
     width: 100%;
     padding: 5px 0;
   }
   .sidebar .custom-widget li:first-child {
+    padding: 0;
+  }
+  .timeline-centered .timeline-marker,
+  .timeline-item .timeline-content::before {
+    display: none;
+  }
+  .timeline-item .timeline-content {
+    margin-left: 0;
+  }
+  .col-xs-12 {
     padding: 0;
   }
 }

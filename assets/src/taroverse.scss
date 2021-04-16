@@ -1984,15 +1984,14 @@ ul.post-nav {
     border-right: 1px solid $main-color;
     box-sizing: border-box;
     padding-right: 10px;
-    strong::after {
-        content: "\f105";
+    strong::before {
+        content: "\f104";
         display: inline-block;
         font-family: FontAwesome;
-        font-size: 8px;
+        font-size: 1.2em;
         font-style: normal;
-        top: -2px;
         position: relative;
-        width: 15px;
+        width: 0.7em;
     }
 }
 .post-nav .next {
@@ -2001,15 +2000,14 @@ ul.post-nav {
     margin-left: -1px;
     padding-left: 10px;
     box-sizing: border-box;
-    strong::before {
-        content: "\f104";
+    strong::after {
+        content: "\f105";
         display: inline-block;
         font-family: FontAwesome;
-        font-size: 8px;
+        font-size: 1.2em;
         font-style: normal;
-        top: -2px;
         position: relative;
-        width: 15px;
+        width: 0.7em;
     }
 }
 #disqus_thread {
@@ -3076,7 +3074,7 @@ controls .owl-dot,
     .featured li {
         .featured-overlay {background-color:rgba(40,35,40,0.7);}
         .post-panel, .post-tag {opacity: 1;}
-    } 
+    }
     .featured-thumb {transform: none;}
     .featured .post-tag {
         top: 30%;
@@ -3090,9 +3088,14 @@ controls .owl-dot,
         &:nth-child(2n) {margin: 0;}
     }
     .related-wrap li {margin: 0;}
+    .custom-widget .rcthumb {margin: 0;}
     .sidebar .custom-widget li {
         width: 100%;
         padding: 5px 0;
         &:first-child {padding:0}
     }
+    .timeline-centered .timeline-marker,
+    .timeline-item .timeline-content::before {display: none;}
+    .timeline-item .timeline-content {margin-left: 0;}
+    .col-xs-12 {padding: 0;}
 }
