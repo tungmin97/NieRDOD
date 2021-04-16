@@ -971,15 +971,29 @@ body {
 
 
 //Recent Lore Posts
-.feat .bx-first {
-    width: 50%;
-    position: relative;
-    float: left;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: {
-        right: 5px;
-        top: 5px;
+.feat {
+    ul li {
+        display: block;
+        width: 48.6%;
+        float: right;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-top: 0;
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        } 
+    }
+    .bx-first {
+        width: 50%;
+        position: relative;
+        float: left;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: {
+            right: 5px;
+            top: 5px;
+        }
     }
     .bx-item {
         width: 100%;
@@ -1017,18 +1031,7 @@ body {
             opacity: 0.8;
         }
     }
-    ul li {
-        display: block;
-        width: 48.6%;
-        float: right;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        padding-top: 0;
-        &:last-child {
-            padding-bottom: 0;
-            margin-bottom: 0;
-        } 
-    }
+    
 }
 .feat li .recent-content .recent-title {
     overflow: hidden;

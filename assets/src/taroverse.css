@@ -1153,6 +1153,20 @@ body {
   clear: both;
 }
 
+.feat ul li {
+  display: block;
+  width: 48.6%;
+  float: right;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  padding-top: 0;
+}
+
+.feat ul li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .feat .bx-first {
   width: 50%;
   position: relative;
@@ -1164,7 +1178,7 @@ body {
   padding-top: 5px;
 }
 
-.feat .bx-first .bx-item {
+.feat .bx-item {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -1173,7 +1187,7 @@ body {
   border-radius: 3px;
 }
 
-.feat .bx-first .bx-item .bx-content {
+.feat .bx-item .bx-content {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1183,7 +1197,7 @@ body {
           box-sizing: border-box;
 }
 
-.feat .bx-first .bx-item .bx-content .recent-title a {
+.feat .bx-item .bx-content .recent-title a {
   display: block;
   color: #f0ede3;
   margin-bottom: 5px;
@@ -1192,15 +1206,15 @@ body {
   font-family: "Montserrat";
 }
 
-.feat .bx-first .bx-item .bx-content .recent-author, .feat .bx-first .bx-item .bx-content .recent-date {
+.feat .bx-item .bx-content .recent-author, .feat .bx-item .bx-content .recent-date {
   color: #f0ede3;
 }
 
-.feat .bx-first .bx-item .box-thumbnail {
+.feat .bx-item .box-thumbnail {
   height: 363px;
 }
 
-.feat .bx-first .bx-item .bf-thumb::after {
+.feat .bx-item .bf-thumb::after {
   content: no-close-quote;
   position: absolute;
   left: 0;
@@ -1209,20 +1223,6 @@ body {
   height: 151px;
   background: url(https://3.bp.blogspot.com/-LnvazGBvKh8/VskckSkmzxI/AAAAAAAAC4s/erEgI6A_ih4/s1600-r/metabg.png) repeat-x;
   opacity: 0.8;
-}
-
-.feat .bx-first ul li {
-  display: block;
-  width: 48.6%;
-  float: right;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  padding-top: 0;
-}
-
-.feat .bx-first ul li:last-child {
-  padding-bottom: 0;
-  margin-bottom: 0;
 }
 
 .feat li .recent-content .recent-title {
