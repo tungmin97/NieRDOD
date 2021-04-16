@@ -1018,7 +1018,7 @@ body {
             }
             .recent-author, .recent-date {color: $text-color;}
         }
-        .box-thumbnail,  {height: 363px;}
+        .box-thumbnail, .bf-thumb {height: 363px;}
         .bf-thumb::after {
             content: no-close-quote;
             position: absolute;

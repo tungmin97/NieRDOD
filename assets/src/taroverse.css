@@ -1210,7 +1210,7 @@ body {
   color: #f0ede3;
 }
 
-.feat .bx-item .box-thumbnail {
+.feat .bx-item .box-thumbnail, .feat .bx-item .bf-thumb {
   height: 363px;
 }
 
