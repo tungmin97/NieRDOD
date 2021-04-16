@@ -602,6 +602,7 @@ body {
   background: #f0ede3;
   position: absolute;
   margin-top: 25px;
+  margin-left: -12px;
 }
 
 .lines::after {
@@ -610,7 +611,7 @@ body {
   height: 2px;
   background: #f0ede3;
   position: relative;
-  top: -8px;
+  top: -16px;
   left: 0;
   content: "";
 }
@@ -621,7 +622,7 @@ body {
   height: 2px;
   background: #f0ede3;
   position: relative;
-  top: 8px;
+  top: 5px;
   left: 0;
   content: "";
 }
@@ -698,6 +699,7 @@ body {
 }
 
 .main-panel {
+  font-size: 1.35em;
   padding: 27px;
   position: absolute;
   width: 100%;
@@ -714,7 +716,7 @@ body {
   padding: 0;
 }
 
-.main-panel .menu-dropdown.has-arrow::after {
+.main-panel .menu-dropdown .has-arrow::after {
   content: "\f105";
   position: relative;
   display: inline-block;
@@ -731,6 +733,11 @@ body {
 
 .main-panel .menu-dropdown li a {
   color: #f0ede3;
+}
+
+.main-panel .menu-dropdown li ul {
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
 }
 
 .main-panel .menu-dropdown li ul li {
@@ -752,6 +759,7 @@ body {
   margin-top: 5px;
   position: relative;
   padding-right: 10px;
+  padding-top: 10px;
 }
 
 .mobile-search input {
@@ -773,12 +781,12 @@ body {
   content: "\f002";
   position: absolute;
   right: 2%;
-  top: 7px;
-  display: inline-block;
+  top: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: FontAwesome;
   font-size: 18px;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
   color: #f0ede3;
 }
 
@@ -916,10 +924,6 @@ body {
   margin-right: 2%;
 }
 
-.box-sec h2 {
-  display: none;
-}
-
 .recent-boxes .box-sec .widget:last-child {
   margin-bottom: 20px;
 }
@@ -932,7 +936,7 @@ body {
   font-family: "Montserrat";
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0 2rem;
+  padding: 0 2em;
   background-color: rgba(77, 73, 62, 0.35);
   color: #3e3c34;
   -webkit-box-sizing: content-box;
@@ -2604,7 +2608,6 @@ blockquote::after {
 }
 
 .cloud-label-widget-content .label-size a {
-  height: 18px;
   color: #3e3c34;
   display: inline-block;
   font-size: 12px;
