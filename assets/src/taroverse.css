@@ -84,8 +84,13 @@ ol {
   margin-bottom: 1.75em;
 }
 
-.plyr__poster {
-  display: none;
+.plyr__poster,
+.ytp-pause-overlay-controls-hidden .ytp-pause-overlay,
+.ytp-chrome-top-buttons,
+.ytp-chrome-top.ytp-show-cards-title,
+.ytp-watermark,
+.ytp-large-play-button {
+  display: none !important;
 }
 
 .container-fluid {

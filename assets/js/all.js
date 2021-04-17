@@ -193,7 +193,7 @@ $(window).scroll(function() {
                     l = (e.feed.entry[r].author[0].name.$t, e.feed.entry[r].content.$t),
                     c = $("<div>").html(l);
                 if (l.indexOf("//www.youtube.com/embed/") > -1) var d = e.feed.entry[r].media$thumbnail.url.replace("/default.jpg", "/mqdefault.jpg");
-                else d = l.indexOf("<img") > -1 ? c.find("img:first").attr("src").replace("s72-c", "s1600") : no_image;
+                else d = l.indexOf("<img") > -1 ? c.find("img:first").attr("src").replace("s72-c", "s640") : no_image;
                 a += '<li><div class="related-thumb"><a class="related-img" href="' + t + '" style="background:url(' + d + ') no-repeat center center;background-size: cover"><span class="related-overlay"/></a></div><div class="related-content"><div class="related-tag"><a class="icon ' + i + '" href="/search/label/' + i + '">' + i + '</a></div><h3 class="related-title"><a href="' + t + '">' + s + "</a></h3></div></li>"
             }
             a += '</div><div class="clear"/>', $("#related-posts").html(a), $(this).find(".related-img").each(function() {
