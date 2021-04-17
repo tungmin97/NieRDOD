@@ -3629,9 +3629,10 @@ controls .owl-dot,
   .sidebar .custom-widget li:first-child {
     padding: 0;
   }
-  .timeline-centered .timeline-marker,
-  .timeline-item .timeline-content::before {
-    display: none;
+  .timeline-centered .timeline-marker .timeline-content::before,
+  .timeline-item:nth-child(2n+1) .timeline-content::before,
+  .timeline-item:nth-child(2n) .timeline-content::before {
+    display: none !important;
   }
   .timeline-item .timeline-content {
     margin-left: 0;
@@ -3639,8 +3640,10 @@ controls .owl-dot,
   .col-xs-12 {
     padding: 0;
   }
-  .timeline-item .timeline-content,
+  .timeline-item .timeline-content {
+    margin-left: 10px !important;
+  }
   .timeline-item .timeline-info {
-    margin-left: 10px;
+    padding-left: 10px !important;
   }
 }
