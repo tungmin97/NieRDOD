@@ -3660,10 +3660,11 @@ controls .owl-dot,
   }
   .timeline-item:nth-child(2n+1) .timeline-content, .timeline-item:nth-child(2n) .timeline-content {
     padding: 20px 20px 0 12px;
+    margin-top: 5px;
   }
   .timeline-item:nth-child(2n+1) .timeline-content::before,
   .timeline-item:nth-child(2n) .timeline-content::before {
-    content: none !important;
+    display: none !important;
   }
   .timeline-item .timeline-content {
     margin-left: 0;
