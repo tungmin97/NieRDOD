@@ -2836,7 +2836,7 @@ controls .owl-dot,
         margin-left: -15px;
     }
     .timeline-item {padding-left: 5px;}
-    .timeline-marker {left: 23%;}
+    .timeline-marker {left: 23% !important;}
     .timeline-item:nth-child(2n+1), 
     .timeline-item:nth-child(2n) {
         .timeline-info {
@@ -2850,7 +2850,7 @@ controls .owl-dot,
             float: left;
             text-align: left;
             width: 73%;
-            ::before {
+            p::before {
                 content: "";
                 position: absolute;
                 left: 26.6%;

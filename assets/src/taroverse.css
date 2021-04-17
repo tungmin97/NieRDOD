@@ -3248,7 +3248,7 @@ controls .owl-dot,
     padding-left: 5px;
   }
   .timeline-marker {
-    left: 23%;
+    left: 23% !important;
   }
   .timeline-item:nth-child(2n+1) .timeline-info,
   .timeline-item:nth-child(2n) .timeline-info {
@@ -3267,8 +3267,8 @@ controls .owl-dot,
     text-align: left;
     width: 73%;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content ::before,
-  .timeline-item:nth-child(2n) .timeline-content ::before {
+  .timeline-item:nth-child(2n+1) .timeline-content p::before,
+  .timeline-item:nth-child(2n) .timeline-content p::before {
     content: "";
     position: absolute;
     left: 26.6%;
