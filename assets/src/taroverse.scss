@@ -2678,7 +2678,7 @@ controls .owl-dot,
     text-align: right;
     padding-right: 90px;
 }
-.timeline-item:nth-child(2n + 1) .timeline-content {
+.timeline-item:nth-child(2n+1) .timeline-content {
     float: right;
     text-align: left;
     width: 47%;
@@ -2689,7 +2689,7 @@ controls .owl-dot,
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
     transition: all 400ms ease;
 }
-.timeline-item:nth-child(2n + 1) .timeline-content:before {
+.timeline-item:nth-child(2n+1) .timeline-content::before {
     content: "";
     position: absolute;
     left: 52.4%;
@@ -2700,7 +2700,7 @@ controls .owl-dot,
     border-bottom: 7px solid transparent;
     border-right: 7px solid $main-color;
 }
-.timeline-item:nth-child(2n) .timeline-content:before {
+.timeline-item:nth-child(2n) .timeline-content::before {
     content: "";
     position: absolute;
     left: 47%;
@@ -2711,7 +2711,7 @@ controls .owl-dot,
     border-bottom: 7px solid transparent;
     border-left: 7px solid $main-color;
 }
-.timeline-item.period .timeline-content:before {
+.timeline-item.period .timeline-content::before {
     content: none;
 }
 .timeline-item:nth-child(2n) .timeline-content {
@@ -2850,6 +2850,7 @@ controls .owl-dot,
             float: left;
             text-align: left;
             width: 73%;
+            &::before {content:none !important;}
             p::before {
                 content: "";
                 position: absolute;
@@ -2869,7 +2870,7 @@ controls .owl-dot,
     .timeline-centered {
         .timeline-item.period {
             padding: 40px 10px 60px;
-            .timeline-content:before {content: none;}
+            .timeline-content::before {content: none;}
         }
         .period .timeline-title {left: 5%;}
     }
