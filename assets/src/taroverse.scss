@@ -2792,6 +2792,35 @@ controls .owl-dot,
     color: $text-color;
     border-radius: 15em;
 }
+//Header Glitch
+.text {
+	position: relative;
+	padding: 20px 34px;
+	padding-left: 60px;
+	width: 80%;
+	min-height: 12.6vmin;
+
+	font-size: 4.2vmin;
+	font-size: clamp(16px, 4.2vmin, 40px);
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	line-height: 150%;
+	text-shadow: 0 0 2px rgba($main-color, 0.4);
+
+	$w: 16px;
+	background: $secondary-color;
+	background-image: linear-gradient(
+		90deg,
+		$main-color $w,
+		$secondary-color $w,
+		$secondary-color $w * 1.5,
+		$main-color $w * 1.5,
+		$main-color $w * 1.5 + 4px,
+		$secondary-color 0px,
+		$secondary-color
+	);
+	box-shadow: 4px 4px 0 0 $main-color;
+}
 
 //Responsive
 @media screen and (max-width: 1024px) {
@@ -2876,7 +2905,6 @@ controls .owl-dot,
     }
     #footer {margin-left: 10px;}
 }
-
 @media screen and (max-width: 979px) {
     .recent-boxes .box-sec, .posts-title {margin-right: 0;}
     .sidebar-wrapper {
@@ -3099,10 +3127,14 @@ controls .owl-dot,
         padding: 5px 0;
         &:first-child {padding:0}
     }
-    .timeline-centered .timeline-marker,
+    .timeline-title {margin: -20px -5px -2px -20px !important;}
+    .timeline-marker {display: none !important;}
     .timeline-item:nth-child(2n+1), 
     .timeline-item:nth-child(2n) {
-        .timeline-content::before {display: none !important;}
+        .timeline-content {
+            padding: 20px 20px 0 12px;
+            &::before {content: none !important;}
+        }
     }
     .timeline-item .timeline-content {margin-left: 0;}
     .col-xs-12 {padding: 0;}

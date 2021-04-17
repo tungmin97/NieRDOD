@@ -401,3 +401,117 @@ function toggleAccordion() {
     this.nextElementSibling.classList.toggle("active");
 }
 items.forEach(item => item.addEventListener("click", toggleAccordion));
+//Blog Variables
+var no_image = "//3.bp.blogspot.com/-Yw8BIuvwoSQ/VsjkCIMoltI/AAAAAAAAC4c/s55PW6xEKn0/s640-r/nth.png";
+var month_format = [, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+var more_text = "Xem Thêm";
+var related_number = 3;
+var pagenav_prev = "Previous";
+var pagenav_next = "Next";
+$(document).ready(function(){
+        $(".widget h2").wrapInner("<span></span>");
+});
+//Panel
+$('.menu-button').click(function(event){
+    event.preventDefault();
+    $('.mobile-panel').toggleClass("toggle-open");
+});
+$('.panel-close').click(function(event){
+    event.preventDefault();
+$('.mobile-panel').removeClass("toggle-open");
+});
+//Mobile Nav
+var prev = 0;
+var $window = $(window);
+var nav = $('.mobile-nav');
+
+$window.on('scroll', function(){
+  var scrollTop = $window.scrollTop();
+  nav.toggleClass('nav-up', scrollTop > prev);
+  prev = scrollTop;
+});
+//Sticky Nav
+window.onscroll = function() {mainNav()};
+
+var header = document.getElementById("main-nav");
+
+var sticky = header.offsetTop;
+
+function mainNav() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("is-sticky");
+  } else {
+    header.classList.remove("is-sticky");
+  }
+}
+//Search Button
+$(function() {
+	$('#search-menu').removeClass('toggled');
+
+	$('#search-icon').click(function(e) {
+		e.stopPropagation();
+		$('#search-menu').toggleClass('toggled');
+		$("#popup-search").focus();
+	});
+
+	$('#search-menu input').click(function(e) {
+		e.stopPropagation();
+	});
+
+	$('#search-menu, body').click(function() {
+		$('#search-menu').removeClass('toggled');
+	});
+});
+//Disqus
+function load_disqus(nierdod) {
+    // Prepare the trigger and target
+    var is_disqus_empty = document.getElementById('disqus_empty'),
+        disqus_target   = document.getElementById('disqus_thread'),
+        disqus_embed    = document.createElement('script'),
+        disqus_hook     = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+
+    // Load script asynchronously only when the trigger and target exist
+    if( disqus_target && is_disqus_empty ) {
+      disqus_embed.type = 'text/javascript';
+      disqus_embed.async = true;
+      disqus_embed.src = '//' + nierdod + '.disqus.com/embed.js';
+      disqus_hook.appendChild(disqus_embed);
+      is_disqus_empty.remove();
+    }
+  }
+
+  /*
+   * Load disqus only when the document is scrolled till the top of the
+   * section where comments are supposed to appear.
+   */
+  window.addEventListener('scroll', function(e) {
+    var currentScroll = document.scrollingElement.scrollTop;
+    var disqus_target = document.getElementById('disqus_thread');
+
+    if( disqus_target && (currentScroll > disqus_target.getBoundingClientRect().top - 150) ) {
+      load_disqus('nierdod');
+      console.log('Disqus loaded.');
+    }
+  }, false);
+
+//Glitch Text
+import GlitchedWriter, {
+	wait
+} from "//cdn.skypack.dev/pin/glitched-writer@v2.0.22-IZ8tQ3hrPdbcemBiPLj0/mode=imports,min/optimized/glitched-writer.js";
+
+const phrases = [
+		"Everything that lives is designed to end.",
+		"We are perpetually trapped in a never ending spiral of life and death.",
+		"Is this a curse? Or some kind of punishment?",
+		"I often think about the god who blessed us with this cryptic puzzle...",
+		"and wonder if we’ll ever get the chance to kill him."
+	],
+	Writer = new GlitchedWriter(".text", "nier");
+
+let i = 0;
+const loop = async () => {
+	await Writer.write(phrases[i]);
+	await wait(900);
+	i = i < phrases.length - 1 ? i + 1 : 0;
+	loop();
+};
