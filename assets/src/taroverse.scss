@@ -2837,7 +2837,8 @@ controls .owl-dot,
     }
     .timeline-item {padding-left: 5px;}
     .timeline-marker {left: 23%;}
-    .timeline-item:nth-child(2n+1), .timeline-item:nth-child(2n) {
+    .timeline-item:nth-child(2n+1), 
+    .timeline-item:nth-child(2n) {
         .timeline-info {
             float: left;
             text-align: left;
@@ -2977,7 +2978,7 @@ controls .owl-dot,
             width: 100%;
             margin-left: 15px;
             margin-top: 10px;
-            &::before {display: none;}
+            &::before {content: none;}
         }
     } 
     .timeline-centered .timeline-item {padding-bottom: 20px;}
@@ -3134,7 +3135,6 @@ controls .owl-dot,
         .timeline-content {
             padding: 20px 20px 0 12px;
             margin-top: 5px;
-            &::before {display: none !important;}
         }
     }
     .timeline-item .timeline-content {margin-left: 0;}

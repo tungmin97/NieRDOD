@@ -3250,21 +3250,25 @@ controls .owl-dot,
   .timeline-marker {
     left: 23%;
   }
-  .timeline-item:nth-child(2n+1) .timeline-info, .timeline-item:nth-child(2n) .timeline-info {
+  .timeline-item:nth-child(2n+1) .timeline-info,
+  .timeline-item:nth-child(2n) .timeline-info {
     float: left;
     text-align: left;
     padding: 0;
     width: 27%;
   }
-  .timeline-item:nth-child(2n+1) .timeline-info::before, .timeline-item:nth-child(2n) .timeline-info::before {
+  .timeline-item:nth-child(2n+1) .timeline-info::before,
+  .timeline-item:nth-child(2n) .timeline-info::before {
     left: 14%;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content, .timeline-item:nth-child(2n) .timeline-content {
+  .timeline-item:nth-child(2n+1) .timeline-content,
+  .timeline-item:nth-child(2n) .timeline-content {
     float: left;
     text-align: left;
     width: 73%;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content ::before, .timeline-item:nth-child(2n) .timeline-content ::before {
+  .timeline-item:nth-child(2n+1) .timeline-content ::before,
+  .timeline-item:nth-child(2n) .timeline-content ::before {
     content: "";
     position: absolute;
     left: 26.6%;
@@ -3430,22 +3434,25 @@ controls .owl-dot,
   .timeline-content p:last-child {
     padding-right: 10px;
   }
-  .timeline-item:nth-child(2n+1) .timeline-info, .timeline-item:nth-child(2n) .timeline-info {
+  .timeline-item:nth-child(2n+1) .timeline-info,
+  .timeline-item:nth-child(2n) .timeline-info {
     float: left;
     text-align: left;
     padding-left: 20px;
   }
-  .timeline-item:nth-child(2n+1) .timeline-info::before, .timeline-item:nth-child(2n) .timeline-info::before {
+  .timeline-item:nth-child(2n+1) .timeline-info::before,
+  .timeline-item:nth-child(2n) .timeline-info::before {
     display: none;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content, .timeline-item:nth-child(2n) .timeline-content {
+  .timeline-item:nth-child(2n+1) .timeline-content,
+  .timeline-item:nth-child(2n) .timeline-content {
     width: 100%;
     margin-left: 15px;
     margin-top: 10px;
   }
   .timeline-item:nth-child(2n+1) .timeline-content::before,
   .timeline-item:nth-child(2n) .timeline-content::before {
-    display: none;
+    content: none;
   }
   .timeline-centered .timeline-item {
     padding-bottom: 20px;
@@ -3658,13 +3665,10 @@ controls .owl-dot,
   .timeline-marker {
     display: none !important;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content, .timeline-item:nth-child(2n) .timeline-content {
+  .timeline-item:nth-child(2n+1) .timeline-content,
+  .timeline-item:nth-child(2n) .timeline-content {
     padding: 20px 20px 0 12px;
     margin-top: 5px;
-  }
-  .timeline-item:nth-child(2n+1) .timeline-content::before,
-  .timeline-item:nth-child(2n) .timeline-content::before {
-    display: none !important;
   }
   .timeline-item .timeline-content {
     margin-left: 0;
