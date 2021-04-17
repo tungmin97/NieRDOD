@@ -3275,7 +3275,7 @@ controls .owl-dot,
   .timeline-item:nth-child(2n) .timeline-content p::before {
     content: "";
     position: absolute;
-    left: 26.6%;
+    left: 26.2%;
     top: 9px;
     width: 0;
     height: 0;
@@ -3423,6 +3423,9 @@ controls .owl-dot,
   .static_page .post-title {
     margin: 5px;
   }
+  .timeline-marker {
+    display: none !important;
+  }
   .table-responsive {
     border-color: #3e3c34;
   }
@@ -3453,10 +3456,6 @@ controls .owl-dot,
     width: 100%;
     margin-left: 15px;
     margin-top: 10px;
-  }
-  .timeline-item:nth-child(2n+1) .timeline-content p::before,
-  .timeline-item:nth-child(2n) .timeline-content p::before {
-    left: 26.2%;
   }
   .timeline-centered .timeline-item {
     padding-bottom: 20px;
@@ -3665,9 +3664,6 @@ controls .owl-dot,
   }
   .timeline-title {
     margin: -20px -5px -2px -20px !important;
-  }
-  .timeline-marker {
-    display: none !important;
   }
   .timeline-item:nth-child(2n+1) .timeline-content,
   .timeline-item:nth-child(2n) .timeline-content {
