@@ -2979,7 +2979,7 @@ controls .owl-dot,
             width: 100%;
             margin-left: 15px;
             margin-top: 10px;
-            &::before {content: none;}
+            p::before {left: 26.2%;}
         }
     } 
     .timeline-centered .timeline-item {padding-bottom: 20px;}

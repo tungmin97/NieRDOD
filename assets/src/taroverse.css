@@ -3454,9 +3454,9 @@ controls .owl-dot,
     margin-left: 15px;
     margin-top: 10px;
   }
-  .timeline-item:nth-child(2n+1) .timeline-content::before,
-  .timeline-item:nth-child(2n) .timeline-content::before {
-    content: none;
+  .timeline-item:nth-child(2n+1) .timeline-content p::before,
+  .timeline-item:nth-child(2n) .timeline-content p::before {
+    left: 26.2%;
   }
   .timeline-centered .timeline-item {
     padding-bottom: 20px;
