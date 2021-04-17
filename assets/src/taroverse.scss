@@ -2962,7 +2962,8 @@ controls .owl-dot,
     .static_page {
         .post-title {margin: 5px;}
     }
-    .timeline-marker {display: none !important;}
+    .timeline-marker,
+    .timeline-item .timeline-content p::before {display: none !important;}
     .table-responsive {border-color: $main-color;}
     .timeline h3 {line-height: 1.2em;}
     .timeline-centered .timeline-item.period {padding:30px 0px 50px;}

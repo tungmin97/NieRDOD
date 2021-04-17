@@ -3423,7 +3423,8 @@ controls .owl-dot,
   .static_page .post-title {
     margin: 5px;
   }
-  .timeline-marker {
+  .timeline-marker,
+  .timeline-item .timeline-content p::before {
     display: none !important;
   }
   .table-responsive {
