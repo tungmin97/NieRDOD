@@ -285,14 +285,6 @@ if ($('#back-to-top').length) {
         }, 700);
     });
 }
-//Logo Parallax
-$(window).scroll(function() {
-    $(".header-content").css({
-        opacity: 1 - .03 * $(this).scrollTop() / 10
-    }), $(".header-content").css({
-        "margin-top": 80 + .1 * $(this).scrollTop() + "px"
-    })
-});
 //Lazy Load
 ! function(e) {
     e.fn.lazyload = function(t) {
